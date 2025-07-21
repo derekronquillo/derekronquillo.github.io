@@ -1,0 +1,75 @@
+@media only screen and (min-width: 720px) {
+    body{margin: 0; background: black;}
+    .full_page{width: 100%;height:100vh;}
+    .half-page{width: 100%;height: 50vh;}
+
+    /* --- ?  DESKTOP NAVIGATION  ? --- */
+    .navbar.Desktop {
+        position: fixed;
+        top: 1vh;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-left: 1vh;
+        padding-right: 1vh;
+        width: auto;
+        height: 5vh;
+        border-radius:25vh;
+        z-index: 10;
+        gap: 1vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .navbar.Desktop.Desktop::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        filter: url(#glass-blur);
+        backdrop-filter: blur(3px);
+        border-radius: 25vh;
+        z-index: 0;
+    }
+    .navbar.Desktop::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 25vh;
+        box-shadow:
+            0 4px 4px rgba(0, 0, 0, 0.15),
+            0 0 12px rgba(0, 0, 0, 0.08),
+            inset 3px 3px 3px 0 rgba(255, 255, 255, 0.45),
+            inset -3px -3px 3px 0 rgba(255, 255, 255, 0.45);
+        z-index: 1;
+        pointer-events: none;
+    }
+    .navbar.Desktop a{
+        z-index: 1;
+        color: white;
+        text-decoration: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1.5vh;
+        white-space: nowrap;
+        font-weight: 100;
+        padding: 0.5vh 1vh;
+        border-radius: 25vh;
+        transition: all 0.25s ease-in-out;
+    }
+    .navbar.Desktop a:hover{
+        box-shadow:
+        0 4px 4px rgba(0, 0, 0, 0.075),
+        0 0 12px rgba(0, 0, 0, 0.006),
+        inset 3px 3px 3px 0 rgba(255, 255, 255, 0.2),
+        inset -3px -3px 3px 0 rgba(255, 255, 255, 0.2);
+        background: rgba(148, 140, 255, 0.1);
+    }
+    .navbar.Desktop a:last-child{
+        box-shadow:
+        0 4px 4px rgba(0, 0, 0, 0.15),
+        0 0 12px rgba(0, 0, 0, 0.08),
+        inset 3px 3px 3px 0 rgba(255, 255, 255, 0.45),
+        inset -3px -3px 3px 0 rgba(255, 255, 255, 0.45);
+        background: rgba(148, 140, 255, 0.152);
+    }
+
+}

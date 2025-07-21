@@ -1,0 +1,16 @@
+@media only screen and (max-width:719px){
+    .navbar.Desktop{
+        display: none;
+    }
+    .navbar.Mobile{
+        display: flex;
+    }
+}
+@media only screen and (min-width:720px){
+    .navbar.Desktop{
+        display: flex;
+    }
+    .navbar.Mobile{
+        display: none;
+    }
+}
