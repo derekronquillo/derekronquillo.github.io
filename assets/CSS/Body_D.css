@@ -2,7 +2,21 @@
     body{margin: 0; background: black;}
     .full_page{width: 100%;height:100vh;}
     .half-page{width: 100%;height: 50vh;}
-
+footer{
+        width:100%;
+        height: 10vh;
+        background: #222;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 2vh;
+        text-align: center;
+        font-weight: 100;
+        white-space: nowrap;
+    }
     /* --- ?  DESKTOP NAVIGATION  ? --- */
     .navbar.Desktop {
         position: fixed;
@@ -43,7 +57,7 @@
         z-index: 1;
         pointer-events: none;
     }
-    .navbar.Desktop a{
+    .navbar.Desktop #btnn{
         z-index: 1;
         color: white;
         text-decoration: none;
@@ -55,7 +69,7 @@
         border-radius: 25vh;
         transition: all 0.25s ease-in-out;
     }
-    .navbar.Desktop a:hover{
+    .navbar.Desktop #btnn:hover{
         box-shadow:
         0 4px 4px rgba(0, 0, 0, 0.075),
         0 0 12px rgba(0, 0, 0, 0.006),
@@ -63,7 +77,7 @@
         inset -3px -3px 3px 0 rgba(255, 255, 255, 0.2);
         background: rgba(148, 140, 255, 0.1);
     }
-    .navbar.Desktop a:last-child{
+    .navbar.Desktop #btnn:last-child{
         box-shadow:
         0 4px 4px rgba(0, 0, 0, 0.15),
         0 0 12px rgba(0, 0, 0, 0.08),
@@ -71,5 +85,76 @@
         inset -3px -3px 3px 0 rgba(255, 255, 255, 0.45);
         background: rgba(148, 140, 255, 0.152);
     }
-
+    .dropdown {position: relative;display: inline-block;}
+    .dropbtn {
+        z-index: 1;
+        color: white;
+        text-decoration: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1.5vh;
+        white-space: nowrap;
+        font-weight: 100;
+        padding: 0.5vh 1vh;
+        border-radius: 25vh;
+        transition: all 0.25s ease-in-out;
+        background: transparent;
+        border-style: none;
+    }
+    .dropbtn:hover, .dropbtn:active {
+        box-shadow:
+        0 4px 4px rgba(0, 0, 0, 0.075),
+        0 0 12px rgba(0, 0, 0, 0.006),
+        inset 3px 3px 3px 0 rgba(255, 255, 255, 0.2),
+        inset -3px -3px 3px 0 rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.1);
+    }
+    .dropdown-content {
+        background: rgba(0, 0, 0, 0.3);
+        display: block;
+        visibility: hidden;
+        position: absolute;
+        width: auto;
+        overflow: auto;
+        z-index: 1;
+        margin-top: 2vh;
+        padding: 0.75vh;
+        border-radius: 1.5vh;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        font-weight: 200;
+        display: block;
+        border-radius: 1vh;
+        font-size: 2vh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .dropdown-content a#seperator{
+        color: rgb(175, 175, 175);
+        font-size: 1.5vh;
+        border-bottom: 1px solid white;
+        border-radius: 0;
+        height: 2vh;
+        margin-bottom: 0.5vh;
+        align-items: center;
+        display: flex;
+    }
+    .dropdown-content:last-child {width: 14vw;}
+    .dropdown a:hover {color: rgb(147, 140, 255);}
+    .show {visibility: visible;}
+    .blur_force{
+        width: calc(100% - (0.75vh)*2);
+        height:calc(100% - (0.75vh)*2);
+        position: absolute;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: calc(1.5vh - 0.75vh);
+        z-index: -1;
+        backdrop-filter: blur(15px);
+    }
 }

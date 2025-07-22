@@ -67,3 +67,29 @@
         scale: 1;
     }
   }
+
+  @keyframes ANI_nav {
+    from{
+      right: -100%;
+      opacity: 0;
+      width: 0%;
+    }
+    to{
+      right: 0;
+      opacity: 1;
+      width: 100%;
+    }
+  }
+   @keyframes ANI_nav_R {
+    from{
+      right: 0;
+      opacity: 1;
+      width: 100%;
+    }
+    to{
+      right: -100%;
+      opacity: 0;
+      width: 0%;
+    }
+    
+  }

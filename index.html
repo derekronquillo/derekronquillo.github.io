@@ -17,21 +17,136 @@
     <title>Lee SeungJae | Derek Ronquillo</title>
 </head>
 <body>
+    <script>
+        function Nav(key){
+            if(key == "show"){
+                document.getElementById("idi_mn").style.width = "100%";
+                document.getElementById("idi_mn").style.opacity = 1;
+                document.getElementById("idi_mn").style.right = 0;
+                document.getElementById("idi_mn").style.animation = "ANI_nav 1.5s ease-in-out forwards";
+                document.getElementById("idi_mn").style.visibility = "visible";
+                document.getElementById("idi_mn").style.height = "100vh";
+            }
+            if(key == "hide"){
+                document.getElementById("idi_mn").style.width = 0;
+                document.getElementById("idi_mn").style.opacity = 0;
+                document.getElementById("idi_mn").style.right = "-100%";
+                document.getElementById("idi_mn").style.animation = "ANI_nav_R 1.5s ease-in-out forwards";
+                document.getElementById("idi_mn").style.visibility = "hidden";
+                document.getElementById("idi_mn").style.height = 0;
+            }
+        }
+    </script>
+
     <!---- * NAVIGATION * ---->
     <div class="navbar Desktop">
-        <a href="#"><img src="assets/IMG/logo.png"alt="Logo"style="background:transparent;height:2.5vh;width:10vh;display:block;"></a>
-        <a href=""> Technology </a>
-        <a href=""> Browse </a>
-        <a href=""> Music & Arts </a>
-        <a href=""> Information </a>
-        <a href=""> Hire Me </a>
+        <a href="#" id="btnn"><img src="assets/IMG/logo.png"alt="Logo"style="background:transparent;height:2.5vh;width:10vh;display:block;"></a>
+        <div class="dropdown">
+                <button class="dropbtn">Technology</button>
+                <div class="dropdown-content">
+                    <div class="blur_force"></div>
+                    <a id="seperator">Downloadable & Paid</a>
+                        <a href="#">Softwares</a>
+                        <!--<a href="#">Latest Technology</a>-->
+                    <a id="seperator">Freelance</a>
+                        <a href="#contact">Sample Website</a>
+                        <a href="#">Beats & Instrumentals</a>
+                        <a href="#">OpenSource Projects</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Browse</button>
+                <div class="dropdown-content">
+                    <div class="blur_force"></div>
+                    <a id="seperator">All</a>
+                        <a href="#">Media</a>
+                        <a href="#">LookBook</a>
+                        <a href="#">GitHub</a>
+                <!--
+                    <a id="seperator">Medical</a>
+                        <a href="#">Articles</a>
+                        <a href="#">Dissecting Vids</a>
+                        <a href="#">Simulation Videos</a>
+                -->
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Music & Arts</button>
+                <div class="dropdown-content">
+                  <div class="blur_force"></div>
+                    <a href="#">Concerts & Performances</a>
+                    <a href="#">Covers & C-Pop / K-Pop</a>
+                <!--
+                    <a href="#">Discography & Filmography</a>
+                    <a href="#">TV Shows & Movies</a>
+                    <a href="#">Paid Paintings</a>
+                    <a href="#">Concert & Exhibit Tickets</a>
+                -->
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Information</button>
+                <div class="dropdown-content">
+                  <div class="blur_force"></div>
+                    <a href="#">Contact Me</a>
+                    <a href="#">About</a>
+                    <a href="https://push.fm/fl/uylf3k4g">International Socials</a>
+                    <a href="https://push.fm/fl/sk1xcoyp">Korea Socials</a>
+                    <a href="https://push.fm/fl/9yb3gv3j">China Socials</a>
+                </div>
+            </div>
+            <a href="#" id="btnn">Hire Me</a>
     </div>
     <div class="navbar Mobile">
         <a href="#"><img src="assets/IMG/logo.png"alt="Logo"style="background:transparent;height:3.5vh;width:14vh;display:block;"></a>
-        <a href=""> Menu </a>
+        <a onclick="Nav('show')"> Menu </a>
         <a href="mail:"> Hire Me </a>
     </div>
-    
+    <div class="mobile_menu" id="idi_mn" style="visibility: hidden;height: 0;">
+        <button type="button" class="collapsible">Technology</button>
+            <div class="content">
+                <a id="seperator">Downloadable & Paid:</a>
+                    <a href="#">Softwares</a>
+                    <!--<a href="#">Latest Technology</a>-->
+                <a id="seperator">Freelance:</a>
+                    <a href="#">Sample Website</a>
+                    <a href="#">Beats & Instrumentals</a>
+                    <a href="#">OpenSource Projects</a>
+            </div>
+        <button type="button" class="collapsible">Browse</button>
+            <div class="content">
+                <a id="seperator">All:</a>
+                    <a href="#">Media</a>
+                    <a href="#">LookBook</a>
+                    <a href="#">GitHub</a>
+                <!--<a id="seperator">Medical:</a>
+                    <a href="#">Articles</a>
+                    <a href="#">Dissecting Videos</a>
+                    <a href="#">Simulation Videos</a>-->
+            </div>
+        <button type="button" class="collapsible">Music & Arts</button>
+            <div class="content">
+                <a href="#">Concerts & Performances</a>
+                <a href="#">Covers & C-Pop / K-Pop</a>
+                <a href="#">Discography & Filmography</a>
+                <!--<a href="#">TV Shows & Movies</a>
+                <a href="#">Paid Paintings</a>
+                <a href="#">Concert & Exhibit Tickets</a>-->
+            </div>
+        <button type="button" class="collapsible">Information</button>
+            <div class="content">
+                <a href="#">Contact Me</a>
+                <a href="#">About</a>
+                <a href="https://push.fm/fl/uylf3k4g">International Socials</a>
+                <a href="https://push.fm/fl/sk1xcoyp">Korea Socials</a>
+                <a href="https://push.fm/fl/9yb3gv3j">China Socials</a>
+            </div>
+        <a id="CLSBTN" onclick="Nav('hide')"> Close </a>
+    </div>
+
     <!---- * SECTION 1: HEAD * ---->
     <section class="full_page Head">
         <h1>Derek Justin Ronquillo</h1>
@@ -74,12 +189,17 @@
         </div>
         <div class="C50">
             <h1> Work Experience </h1>
-            <h2> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos rerum commodi quos optio magnam sapiente minima evenie</h2>
+            <h2> I’ve worked with real people solving real problems: writing code, fixing bugs, and learning by doing. Every project added something new to how I build and think. </h2>
             <table>
                 <tr>
                     <td style="color: gray;">2024 - Present</td>
                     <td style="color: rgb(255, 150, 150);">CEO | founder</td>
-                    <td style="color: yellow;">Quantum Labs</td>
+                    <td style="color: rgb(255, 255, 119);">Quantum Labs</td>
+                </tr>
+                <tr>
+                    <td style="color: gray;">2023 - 2024</td>
+                    <td style="color: rgb(255, 150, 150);">Web Developer | Software Engineer</td>
+                    <td style="color: rgb(255, 255, 119);">MoziTech</td>
                 </tr>
                 <tr>
                     <td style="color: gray;">2023 - Present</td>
@@ -90,13 +210,7 @@
                     <td style="color: gray;">2021 - Present</td>
                     <td style="color: rgb(255, 150, 150);">UI/UX Designer</td>
                     <td>Free Lance</td>
-                </tr>
-                <tr>
-                    <td style="color: gray;">2023 - 2024</td>
-                    <td style="color: rgb(255, 150, 150);">Web Developer</td>
-                    <td style="color: yellow;">MoziTech Solutions</td>
-                </tr>
-               
+                </tr>   
                 <tr>
                     <td style="color: gray;">2020 - 2022</td>
                     <td style="color: rgb(255, 150, 150);">Static-Web Programmer</td>
@@ -108,7 +222,7 @@
 
     <!---- * SECTION 2: PROJECTS * ---->
     <section class="full_page Softwares">
-        <h1> Downloadable Softwares </h1>
+        <h1> Projects </h1>
         <h2> Buy or download your favorite Programs that was developed by me.</h2>
         <div class="container">
             <div class="card">
@@ -154,7 +268,7 @@
     </section>
 
     <!---- * SECTION 3: TECHNOLOGY * ---->
-    <section class="full_page Technology">
+    <!--<section class="full_page Technology">
         <img alt="">
         <div class="right">
             <h3> Latest Technology : </h3>
@@ -180,20 +294,63 @@
             </div>
         </div>
         
-    </section>
-    <div id="trigger">
+    </section>-->
+    
     <!---- * SECTION 4: PERFORMANCE * ---->
     <section class="full_page Performance">
-        <iframe class="video-container" src="https://www.youtube.com/embed/Aa_5gqwz9D4?list=RD-LcrRbdiZTA" title="Bai Jing Ting 白敬亭 × Mayday 五月天 – “ Willful ” Official Stage Video｜Theme Song of “The First Frost”" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="video-container" src="https://www.youtube.com/embed/sNRBN9_CtbQ" title="APFS24N03W23I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <div class="text-content">
             <h1>Featured Performance</h1>
-            <h2>Title goes here.</h2>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum velit ad magni, iste numquam corporis voluptatum possimus minus molestias enim aliquid nobis blanditiis vitae. Recusandae et molestiae quo architecto totam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis est sed excepturi porro quo? Corporis nostrum corrupti saepe aperiam molestiae quidem laudantium laboriosam eligendi aut modi suscipit, quibusdam perferendis? Repudiandae.</p>
+            <h2>Genesis Live @ AMA, Philippines | SeungJae on Lead Guitar</h2>
+            <p> Genesis Band live on stage at AMA, Philippines! Lead guitar by yours truly, SeungJae 🎶 Just a bunch of passionate musicians bringing some heat to the stage. If you're watching from anywhere around the world—welcome in, and thanks for checking out our sound!🌏 Feel the music, no subtitles needed. #GenesisBand #SeungJae #LiveMusic #PhilippinesVibes #GuitarEnergy #WorldStage </p>
             <a href=""> View All Performances </a>
         </div>
     </section>
-    </div>
 
+    <!---- * FOOTER * ---->
+    <footer>
+        (C) Derek Justin P. Ronquillo
+        <br>
+        Lee SeungJae (Stage / Screen Name)
+    </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "flex") {
+            content.style.display = "none";
+            } else {
+            content.style.display = "flex";
+            }
+        });
+        }
+    </script>
+    <script>
+    document.querySelectorAll('.dropbtn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            closeAllDropdowns();
+            const dropdown = this.nextElementSibling;
+            dropdown.classList.toggle('show');
+        });
+    });
+
+    window.addEventListener('click', function () {
+        closeAllDropdowns();
+    });
+
+    function closeAllDropdowns() {
+        document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+            dropdown.classList.remove('show');
+        });
+    }
+    </script>
+    
 </body>
 <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
     <filter id="glass-blur" x="0" y="0" width="100%" height="100%" filterUnits="objectBoundingBox">
